@@ -1,0 +1,23 @@
+{
+  "name": "JJ-Start-3",
+  "version": "1.0.0",
+  "description": "Gulp, Pug, SASS ",
+  "keywords": [
+    "static website",
+    "static"
+  ],
+  "author": "JJ",
+  "license": "",
+  "homepage": "",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "browser-sync": "~2.12.8",
+    "gulp-sass": "~2.3.1",
+    "gulp-cssnano": "~2.1.2",
+    "gulp-pug": "3.0.2",
+    "gulp-plumber": "1.1.0",
+    "gulp-watch": "4.3.5",
+    "gulp-uglify": "1.5.3",
+    "gulp-imagemin": "3.0.1"
+  }
+}
