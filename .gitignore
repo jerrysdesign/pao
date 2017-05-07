@@ -23,9 +23,7 @@ npm-debug.log
 *~
 
 ## Build
-app/dist/css
-app/dist/*.html
-
+app/dist
 
 ## Sublime editor
 *.sublime-project
