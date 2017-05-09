@@ -6,6 +6,7 @@ var gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     uglify      = require('gulp-uglify'),
     cssnano     = require('gulp-cssnano'),
+    sourcemaps      = require('gulp-sourcemaps'),
     imagemin    = require('gulp-imagemin');
 
 var cfg = {
@@ -17,7 +18,9 @@ var cfg = {
 gulp.task('styles', function(){
   gulp.src(cfg.src + 'sass/*.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sourcemaps.init())
+      .pipe(sass())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(cfg.build + 'css/'));
 });
 
