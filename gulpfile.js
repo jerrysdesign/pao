@@ -6,6 +6,7 @@ var gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     uglify      = require('gulp-uglify'),
     cssnano     = require('gulp-cssnano'),
+    sourcemaps      = require('gulp-sourcemaps'),
     imagemin    = require('gulp-imagemin');
 
 var cfg = {
@@ -17,7 +18,9 @@ var cfg = {
 gulp.task('styles', function(){
   gulp.src(cfg.src + 'sass/*.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sourcemaps.init())
+      .pipe(sass())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(cfg.build + 'css/'));
 });
 
@@ -36,7 +39,13 @@ gulp.task('js', function () {
   .pipe(gulp.dest(cfg.build + 'scripts/'));
 });
 
-gulp.task('serve', ['styles', 'views', 'js'], function() {
+gulp.task('image-min', function(){
+  gulp.src(cfg.src + 'img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest(cfg.build + 'images'));
+});
+
+gulp.task('serve', ['styles', 'views', 'js', 'image-min'], function() {
   browserSync.init({
     server: {
       baseDir: cfg.build
@@ -45,14 +54,10 @@ gulp.task('serve', ['styles', 'views', 'js'], function() {
   gulp.watch(cfg.src + 'sass/**/*.scss', ['styles']).on('change', browserSync.reload);
   gulp.watch(cfg.src + 'pug/**/*.pug', ['views']).on('change', browserSync.reload);
   gulp.watch(cfg.src + 'scripts/**/*.js', ['js']).on('change', browserSync.reload);
+  gulp.watch(cfg.src + 'img/**/*', ['image-min']).on('change', browserSync.reload);
   // gulp.watch('app/dist/**/*').on('change', browserSync.reload);
 });
 
-gulp.task('image-min', function(){
-  gulp.src(cfg.build + 'img/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest(cfg.build + 'img'));
-});
 
 gulp.task('js-min', function(){
   gulp.src(cfg.build + 'scripts/*.js')
