@@ -6,14 +6,19 @@ var gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     uglify      = require('gulp-uglify'),
     cssnano     = require('gulp-cssnano'),
-    sourcemaps      = require('gulp-sourcemaps'),
+    sourcemaps  = require('gulp-sourcemaps'),
     imagemin    = require('gulp-imagemin');
+    npmDist     = require('gulp-npm-dist');
 
 var cfg = {
   'src': 'src/',
   'build': 'dist/'
 }
 
+gulp.task('copy:vendors', function() {
+  gulp.src(npmDist(), {base:'./node_modules'})
+    .pipe(gulp.dest(cfg.src + 'vendors'));
+});
 
 gulp.task('styles', function(){
   gulp.src(cfg.src + 'sass/*.scss')
