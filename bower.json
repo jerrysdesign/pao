@@ -1,0 +1,22 @@
+{
+  "name": "JJ-Start-3",
+  "description": "Gulp, Pug, SASS",
+  "main": "gulpfile.js",
+  "authors": [
+    "JJ"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "static",
+    "website",
+    "static"
+  ],
+  "homepage": "https://github.com/jerrysdesign/JJ-Start-3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
