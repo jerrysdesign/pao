@@ -55,7 +55,7 @@ gulp.task('image-min', function(){
     .pipe(gulp.dest(cfg.build + 'images'));
 });
 
-gulp.task('serve', ['styles', 'views', 'js', 'image-min', 'copy:vendors'], function() {
+gulp.task('serve', ['copy:vendors', 'styles', 'views', 'js', 'image-min'], function() {
   browserSync.init({
     server: {
       baseDir: cfg.build
