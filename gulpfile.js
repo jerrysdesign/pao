@@ -8,25 +8,19 @@ var gulp        = require('gulp'),
     cssnano     = require('gulp-cssnano'),
     sourcemaps  = require('gulp-sourcemaps'),
     imagemin    = require('gulp-imagemin');
-    npmDist     = require('gulp-npm-dist');
 
 var cfg = {
-  'src': 'src/',
-  'build': 'dist/'
+  'src': './src/',
+  'build': './dist/'
 }
 
-gulp.task('copy:vendors', function() {
-  gulp.src(npmDist(), {base:'./node_modules'})
-    .pipe(gulp.dest(cfg.src + 'vendors'));
-});
-
-gulp.task('copy:build', function () {
-  gulp.src(cfg.src + 'vendors'+ '/**/*')
+gulp.task('copy', function () {
+  return gulp.src(cfg.src + 'vendors'+ '/**/*')
     .pipe(gulp.dest(cfg.build + 'vendors' + '/'));
 });
 
 gulp.task('styles', function(){
-  gulp.src(cfg.src + 'sass/*.scss')
+  return gulp.src(cfg.src + 'sass/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -35,7 +29,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('views', function buildHTML() {
-  gulp.src(cfg.src + 'pug/*.pug')
+  return gulp.src(cfg.src + 'pug/*.pug')
     .pipe(plumber())
     .pipe(pug({
       pretty: true
@@ -44,18 +38,18 @@ gulp.task('views', function buildHTML() {
 });
 
 gulp.task('js', function () {
-  gulp.src(cfg.src + 'scripts/*.js')
+  return gulp.src(cfg.src + 'scripts/*.js')
   .pipe(plumber())
   .pipe(gulp.dest(cfg.build + 'scripts/'));
 });
 
 gulp.task('image-min', function(){
-  gulp.src(cfg.src + 'img/*')
+  return gulp.src(cfg.src + 'img/*')
     .pipe(imagemin())
     .pipe(gulp.dest(cfg.build + 'images'));
 });
 
-gulp.task('serve', ['copy:vendors', 'styles', 'views', 'js', 'image-min'], function() {
+gulp.task('serve', ['copy', 'styles', 'views', 'js', 'image-min'], function() {
   browserSync.init({
     server: {
       baseDir: cfg.build
@@ -69,19 +63,17 @@ gulp.task('serve', ['copy:vendors', 'styles', 'views', 'js', 'image-min'], funct
 });
 
 gulp.task('js-min', function(){
-  gulp.src(cfg.build + 'scripts/*.js')
+  return gulp.src(cfg.build + 'scripts/*.js')
     .pipe(uglify())
     .pipe(gulp.dest(cfg.build + 'scripts'));
 });
 
 gulp.task('css-min', function(){
-  gulp.src(cfg.build + 'css/*.css')
+  return gulp.src(cfg.build + 'css/*.css')
     .pipe(cssnano())
     .pipe(gulp.dest(cfg.build + 'css'));
 });
 
-gulp.task('default', ['serve', 'copy:vendors']);
-
-gulp.task('copy', ['copy:vendors', 'copy:build']);
+gulp.task('default', ['serve']);
 
 gulp.task('build', ['copy', 'image-min', 'js-min', 'css-min']);
