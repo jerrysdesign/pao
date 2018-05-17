@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="198" height="189" viewBox="0 0 198 189">
+  <g fill="none" fill-rule="evenodd" transform="translate(4 4)">
+    <polygon fill="#FFF" points=".819 2.421 .819 173.943 81.467 173.943 94.687 183.4 110.771 173.943 190.043 173.943 190.043 2.421 108.928 2.421 94.687 14.582 81.467 2.421"/>
+    <rect width="56" height="35" x="19.5" y="30.5" fill="#CBC1FF" stroke="#979797"/>
+    <g stroke="#473C95" stroke-width="8">
+      <polygon points="190 171.474 109.25 171.474 99.75 181 90.25 181 80.75 171.474 0 171.474 0 0 80.75 0 90.25 9.526 99.75 9.526 109.25 0 190 0"/>
+      <path d="M95,9.52631579 L95,181"/>
+    </g>
+    <path stroke="#473C95" stroke-width="8" d="M14 86L80 86M14 105L80 105M14 124L80 124M14 143L80 143M109 105L176 105M109 124L176 124M109 143L176 143M109 29L176 29M109 48L176 48M138 76L148 76M119 76L128 76M157 76L167 76"/>
+    <polygon stroke="#473C95" stroke-width="8" points="19 67 76 67 76 29 19 29"/>
+  </g>
+</svg>

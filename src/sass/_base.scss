@@ -1,0 +1,250 @@
+/**
+  Navigation File
+
+  01. Global Style
+  02. Custom Fonts
+  03. Text Head
+  04. Base Style Form
+  05. Typography
+
+ */
+/* 01. Global Style
+   ==================================== */
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 900;
+}
+h2 {
+  font-size: 42px;
+  font-weight: 900;
+}
+h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+h6 {
+  font-size: 18px;
+  font-weight: 400;
+}
+a {
+  transition: 0.2s linear;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  color: $color01;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.wrapper {
+  position: relative;
+}
+.blue-brd-btn {
+  color: $color02;
+  padding: 14px 25px;
+  border: 2px solid $color02;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+  display: inline-block;
+  font-family: "Myriad-Pro-Regular", serif;
+  transition: 0.2s linear;
+}
+.blue-brd-btn:hover {
+  background: $color02;
+  color: white;
+  text-decoration: none;
+}
+.white-brd-btn {
+  color: white;
+  padding: 12px 24px;
+  border: 2px solid white;
+  font-size: 18px;
+  text-align: center;
+  display: inline-block;
+  transition: 0.2s linear;
+  border-radius: 4px;
+}
+.white-brd-btn:hover {
+  background: white;
+  color: white;
+  text-decoration: none;
+}
+.see-brd-btn {
+  color: white;
+  padding: 14px 34px;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  background: $color02;
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-image: linear-gradient(45deg, $color12 0%, $color13 100%);
+  box-shadow: 0 0 1px 0 rgba(173,164,139,.12), 0 1px 3px 0 rgba(8,19,31,.12);
+  border-radius: 4px;
+}
+.see-brd-btn:hover {
+  background: $color07;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 0 1px 0 rgba(173,164,139,.22), 0 1px 3px 0 rgba(8,19,31,.22);
+}
+.h2-main {
+  color: $color03;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 20px;
+}
+/* 02. Custom Fonts
+   ==================================== */
+@font-face {
+  font-family: "Myriad-Pro-Regular";
+  src: url("../fonts/Myriad-Pro Regular.eot");
+  src: url("../fonts/Myriad-Pro Regular.ttf") format("truetype"), url("../fonts/Myriad-Pro Regular.woff") format("woff"), url("../fonts/Myriad-Pro Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 03. Text Head
+   ==================================== */
+.text-head h5 {
+  font-size: 18px;
+  color: $color02;
+  margin-bottom: 25px;
+}
+/* 04. Base Style Form
+   ==================================== */
+form.custom-form input,
+form.custom-form textarea {
+  padding: 5px 0;
+  font-size: 16px;
+  color: $color03;
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 0 0 2px 0;
+  border-color: #d0d3e3;
+  width: 100%;
+}
+form.custom-form input:focus,
+form.custom-form textarea:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+form.custom-form .see-brd-btn {
+  padding: 14px 53px;
+}
+form.custom-form textarea {
+  resize: none;
+  height: 37px;
+}
+form.custom-form label {
+  position: absolute;
+  -ms-transform: translateY(9px);
+      transform: translateY(9px);
+  left: 0;
+  transition: all 0.25s ease;
+  backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: $color06;
+  letter-spacing: 0.5px;
+}
+form.custom-form label.active {
+  -ms-transform: translateY(-25px);
+      transform: translateY(-25px);
+  left: 2px;
+  font-size: 14px;
+}
+form.custom-form label.highlight {
+  color: $color06;
+}
+form.custom-form .form-group {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+/* 05. Typography
+   ==================================== */
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6 {
+  margin-bottom: 30px;
+  color: $color07;
+}
+.typography h1 span,
+.typography h2 span,
+.typography h3 span,
+.typography h4 span,
+.typography h5 span,
+.typography h6 span {
+  font-weight: 700;
+}
+.typography h1 span,
+.typography h2 span,
+.typography h3 span {
+  font-size: 22px;
+  font-weight: bold;
+}
+.typography h4 span {
+  font-size: 22px;
+}
+.typography h5 span {
+  font-size: 18px;
+}
+.typography h6 span {
+  font-size: 16px;
+}
+.line-black {
+  width: 100%;
+  height: 3px;
+  margin: 60px 0;
+  background-color: $color07;
+}
+.unordered-list li {
+  list-style: none;
+  font-size: 16px;
+  color: $color03;
+  line-height: 26px;
+}
+.unordered-list li:before {
+  content: "-";
+  display: inline-block;
+  margin-right: 10px;
+}
+.unordered-list li ul {
+  margin-left: 20px;
+}
+.ordered-list {
+  margin-left: 20px;
+}
+.ordered-list li {
+  font-size: 16px;
+  color: $color03;
+  line-height: 26px;
+}
+.ordered-list li ul {
+  list-style: decimal;
+  margin-left: 20px;
+}
+.animatedParent {
+  overflow: hidden;
+}

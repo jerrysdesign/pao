@@ -1,0 +1,179 @@
+/**
+	Navigation File
+
+	01. Info block
+	02. List
+	03. Text
+
+ */
+/* 01. Info block
+   ==================================== */
+.banner {
+  padding: 140px 0 125px;
+  position: relative;
+  margin-bottom: 86px;
+  background: url(../img/background.png) no-repeat center;
+  background-size: cover;
+}
+.banner:before {
+  content: "";
+  width: 2px;
+  height: 87px;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  display: inline-block;
+  background-color: $color02;
+}
+.banner .item h1 {
+
+  color: white;
+
+}
+.banner .item p {
+  color: $white;
+  line-height: 27px;
+  padding: 0 0 0 30px;
+  margin: 20px 0 42px;
+  font-size: 18px;
+  border-left: 2px solid $white;
+}
+.banner .item .blue-brd-btn {
+  background: $color02;
+  border: 2px solid $color02;
+  color: white;
+  font-family: 'Muli', sans-serif;
+}
+.banner .item .blue-brd-btn:hover,
+.banner .item .blue-brd-btn:active {
+  background: $color07;
+  border: 2px solid $color07;
+}
+
+.countdown-wrapper {
+  background: rgba($white, .25);
+  box-shadow: 0 20px 20px 0 rgba(black, .10);
+  border-radius: 6px;
+  padding: 30px;
+  .start-time {
+    font-size: 16px;
+    color: rgba(#F3F5FA, .8);
+    letter-spacing: 0;
+    margin-bottom: 10px;
+  }
+  .countdown {
+    background-image: linear-gradient(-224deg, #FA4A6F 0%, #EF5395 31%, #DE4DCB 76%, #CE4CE6 100%);
+    border-radius: 6px;
+    padding: 25px 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 24px;
+    .title {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .inner {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    .dd, .hh, .mm, .ss {
+      width: 25%;
+    }
+    .dd {}
+    .hh {}
+    .mm {}
+    .ss {}
+    .counter {
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 900;
+      text-align: center;
+      text-shadow: 0 0 3px #FFFFFF;
+    }
+    .unit {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .progress-no {
+    margin-bottom: 32px;
+    .total {
+      font-size: 40px;
+      color: #F3F5FA;
+      font-weight: 700;
+      .unit {
+        padding-right: .5em;
+      }
+      .no {}
+      .title {
+        font-size: 16px;
+        color: rgba(#F3F5FA, .8);
+      }
+    }
+
+  }
+}
+
+.progress-bar-wrapper {
+  .now {
+    float: left;
+    font-size: 12px;
+    color:rgba(#F3F5FA, .8);
+    text-align: left;
+  }
+  .target {
+    float: right;
+    font-size: 12px;
+    color:rgba(#F3F5FA, .8);
+    text-align: right;
+  }
+}
+
+.bar {
+  display: flex;
+  margin-top: 8px;
+}
+.ico-progress {
+  position: relative;
+  height: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  flex-grow: 10;
+  border: 3px solid white;
+}
+
+.ico-progress-bar {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 0%;
+  height: 14px;
+  border-radius: 7px;
+  background-image: linear-gradient(-224deg, #CE4CE6 0%, #DE4DCB 31%, #EF5395 76%, #FA4A6F 100%);
+  z-index: 1;
+}
+.ico-progress-bar-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  height: 14px;
+  border-radius: 7px;
+  background-color: white;
+  z-index: 0;
+  position: relative;
+}
+.percentage {
+  background-color: $color12;
+  border-radius: 15px;
+  height: 30px;
+  box-sizing: border-box;
+  width: 50px;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  float:left;
+  line-height: 30px;
+  margin: 0 0 0 10px;
+}

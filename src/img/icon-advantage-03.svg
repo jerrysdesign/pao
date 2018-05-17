@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="62" height="34" x="3" y="5" fill="#FFF"/>
+    <rect width="62" height="8" x="3" y="40" fill="#98DAF5" transform="matrix(1 0 0 -1 0 88)"/>
+    <path stroke="#1C5A74" stroke-width="2" d="M22 59L27 49M41 49L46 59M52 63L66 63M24 63L2 63"/>
+    <polyline stroke="#1C5A74" stroke-width="2" points="19 63 19 59 49 59 49 63 26 63"/>
+    <path stroke="#1C5A74" stroke-width="2" d="M52 59L54 59M56 59L58 59"/>
+    <polyline stroke="#1C5A74" stroke-width="2" points="3 38 3 5 65 5 65 41 3 41 3 49 65 49 65 44"/>
+    <path stroke="#1C5A74" stroke-width="2" d="M32.002,21.6982 C29.838,19.1132 27.052,17.0002 22,17.0002 L10,17.0002 C10,17.0002 10,31.0002 24,31.0002 C35,31.0002 33,17.0002 46,17.0002 L58,17.0002 C58,17.0002 58,31.0002 44,31.0002 C40.116,31.0002 37.854,29.2552 35.979,26.9972"/>
+    <path stroke="#1C5A74" stroke-width="2" d="M27 24C27 24 25 26 22 26 19 26 18 22 18 22L22 22C25 22 27 24 27 24zM41 24C41 24 43 26 46 26 49 26 50 22 50 22L46 22C43 22 41 24 41 24zM35 11L33 11M31 11L29 11M39 11L37 11"/>
+  </g>
+</svg>

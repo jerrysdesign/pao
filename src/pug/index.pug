@@ -1,8 +1,16 @@
 extends partails/base
-include partails/nav
+//- include partails/nav
 
 block content
-  +nav
-  div.center
-    h1 jj start 123
-    p Hollo world.
+  .wrapper
+    include partails/header
+    include partails/banner
+    include partails/section-about
+    include partails/section-advantage
+    include partails/section-utility
+    include partails/section-download
+    include partails/section-media
+    include partails/section-roadmap
+    include partails/section-team-01
+    include partails/section-ico
+    include partails/footer

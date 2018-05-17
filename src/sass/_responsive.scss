@@ -1,0 +1,453 @@
+/*========================================
+=            Style Responsive            =
+========================================*/
+
+@media only screen and (max-width: 1339px) {
+  .banner {
+    padding: 240px 0 240px;
+  }
+  .download-block {
+    padding: 275px 0 358px 0;
+  }
+  footer {
+    padding-top: 300px;
+  }
+  .about-working {
+    padding: 205px 0 360px 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .banner {
+    padding: 240px 0 240px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  .our-team .images img {
+    width: 220px;
+  }
+  .our-team .images130 img {
+    width: 130px;
+  }
+  .our-team .images160 img {
+    width: 160px;
+  }
+  .our-team .images100 img {
+    width: 100px;
+  }
+  .modal-lg {
+    max-width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1119px) {
+  /*=================================
+	=            Home Page            =
+	=================================*/
+  header .blue-brd-btn,
+  header.fixed .blue-brd-btn,
+  .header-type-2 .blue-brd-btn {
+    margin-left: 5px;
+  }
+  header .nav-menu li,
+  header.fixed .nav-menu li,
+  .header-type-2 .nav-menu li {
+    padding: 24px 16px;
+  }
+  header .nav-menu .sub-menu li a,
+  header.fixed .nav-menu .sub-menu li a,
+  .header-type-2 .nav-menu .sub-menu li a {
+    padding: 0 11px;
+  }
+  .media {
+    .media-text {
+      .see-brd-btn {
+        margin-top: 20px;
+      }
+    }
+    .media-auther {
+      margin-top: 20px;
+      padding-top: 10px;
+      .text {
+        padding-left: 10px;
+      }
+    }
+  }
+  .grid.masonry .grid-item-width2 {
+    width: 50%;
+  }
+  .grid.masonry .grid-item-width1 {
+    width: 25%;
+  }
+  .grid.masonry .grid-item {
+    text-align: center;
+    padding: 0 15px !important;
+  }
+  .grid.masonry .grid-item.text-right,
+  .grid.masonry .grid-item.text-left {
+    text-align: center !important;
+  }
+  .grid.masonry .grid-item:nth-child(2) {
+    padding: 0;
+  }
+  .grid.masonry .grid-item:nth-child(3) {
+    margin-top: 0;
+  }
+  .grid.masonry .grid-item:nth-child(4) {
+    padding-top: 0;
+    padding-left: 0;
+  }
+  .grid.masonry .grid-item:nth-child(5) {
+    padding-top: 0;
+    margin-top: 40px;
+  }
+  .grid.masonry .grid-item:nth-child(6) {
+    margin-top: 40px;
+    padding-left: 0;
+  }
+  .about-block {
+    margin-bottom: 80px;
+  }
+  .about-block .philosophy-div2 {
+    padding: 15px 0 0 35px;
+  }
+  footer .inside,
+  footer .inside-column {
+    padding-left: 0;
+  }
+  /*=====  End of Home Page  ======*/
+}
+
+
+@media only screen and (max-width: 991px) {
+  /*=================================
+	=            Home Page            =
+	=================================*/
+  header,
+  .header-type-2 {
+    padding: 25px 0;
+    .logo {
+      height: 46px;
+    }
+  }
+  header .header-block,
+  .header-type-2 .header-block {
+    display: none;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index: 9;
+    background: linear-gradient(to bottom, $color12 0%, $color13 100%);
+  }
+  header .blue-brd-btn,
+  .header-type-2 .blue-brd-btn {
+    margin-left: 0 !important;
+  }
+  header .mobile-btn,
+  .header-type-2 .mobile-btn {
+    position: absolute;
+    top: -50px;
+    right: 15px;
+    display: inline-block;
+    z-index: 9;
+  }
+  header .nav-menu,
+  .header-type-2 .nav-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header .nav-menu li,
+  .header-type-2 .nav-menu li {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+  header .nav-menu li.top-sub-menu > a,
+  .header-type-2 .nav-menu li.top-sub-menu > a {
+    pointer-events: none;
+  }
+  header .nav-menu li.top-sub-menu:hover,
+  .header-type-2 .nav-menu li.top-sub-menu:hover {
+    background: transparent;
+  }
+  header .nav-menu li.top-sub-menu:hover .sub-menu,
+  .header-type-2 .nav-menu li.top-sub-menu:hover .sub-menu {
+    background: linear-gradient(to bottom,$color08 0%, $color09 100%);
+  }
+  header .nav-menu li.top-sub-menu.active,
+  .header-type-2 .nav-menu li.top-sub-menu.active {
+    padding-bottom: 0;
+  }
+  header .nav-menu .sub-menu,
+  .header-type-2 .nav-menu .sub-menu {
+    margin-top: 15px;
+    padding: 17px 0;
+    position: static;
+    opacity: 1;
+    display: none;
+    visibility: visible;
+    background: linear-gradient(to bottom,$color08 0%, $color09 100%);
+  }
+  header .nav-menu .sub-menu.active,
+  .header-type-2 .nav-menu .sub-menu.active {
+    display: block;
+  }
+  header.fixed,
+  .header-type-2.fixed {
+    background: linear-gradient(to bottom, $color11 0%, #251541 100%);
+  }
+  header.fixed .mobile-btn span,
+  .header-type-2.fixed .mobile-btn span,
+  header.fixed .mobile-btn span:before,
+  .header-type-2.fixed .mobile-btn span:before,
+  header.fixed .mobile-btn span:after,
+  .header-type-2.fixed .mobile-btn span:after {
+    background-color: white;
+  }
+  header.fixed .mobile-btn.active span,
+  .header-type-2.fixed .mobile-btn.active span {
+    background-color: transparent;
+  }
+  header.fixed .nav-menu li,
+  .header-type-2.fixed .nav-menu li {
+    padding: 15px 0;
+  }
+  .banner {
+    .item {
+      margin-bottom: 20px;
+    }
+    .white-brd-btn {
+      width: 100%;
+    }
+  }
+  .about-block {
+    .h2-main {
+      text-align: left;
+    }
+  }
+  .text-head {
+    text-align: center;
+    h5 {
+      text-align: center;
+    }
+  }
+  .h2-main {
+    text-align: center;
+  }
+  .utility {
+    margin-top: -50px;
+    .utility-item {
+      .white-brd-btn {
+        opacity: 1;
+      }
+    }
+  }
+  .media-auther {
+    margin-top: 20px;
+  }
+  .our-team .text {
+    padding-left: 0;
+  }
+  .grid.masonry .grid-item:nth-child(4) {
+    padding-left: 84px;
+  }
+  .reviews-wrapper .reviews-inside .review-text {
+    padding: 15px 0 0;
+  }
+  .about-block .philosophy-div2 p {
+    padding-right: 0;
+  }
+  .ico .exchange {
+    padding: 20px 20px;
+  }
+  .ico:before  {
+    background-position-x: center;
+  }
+
+  /*=====  End of Home Page  ======*/
+}
+@media only screen and (max-width: 767px) {
+  /*=================================
+	=            Home Page            =
+	=================================*/
+  .text-head {
+    text-align: center;
+    h5 {
+      text-align: center;
+    }
+  }
+  .h2-main {
+    text-align: center;
+  }
+  header .mobile-btn {
+    right: 15px;
+  }
+  .courusel-container {
+    padding: 110px 0 120px;
+  }
+  .courusel-container .main-slider-logo-block img {
+    margin: 0 auto;
+  }
+  .h2-main {
+    font-size: 28px;
+  }
+  .about-block {
+    margin-bottom: 40px;
+  }
+  .advantage {
+    padding: 50px 0 200px;
+    ul li {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+    ul li:nth-child(even) {
+      padding-left: 0;
+    }
+  }
+  .utility {
+    margin-top: -100px;
+    .utility-item-wrapper {
+      margin-bottom: 20px;
+    }
+  }
+  .download-block {
+    padding: 148px 0 210px 0;
+    margin-bottom: 0;
+  }
+  .media .media-div1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .media .media-div2 {
+    padding-right: 15px;
+  }
+  .media .media-cont {
+    width: 68%;
+    margin-left: 28px;
+  }
+  .our-team {
+    padding: 90px 0 70px 0;
+  }
+  .our-team h5 {
+    font-size: 12px;
+  }
+  .our-team span {
+    font-size: 10px;
+  }
+  .our-team .text {
+    margin-bottom: 40px;
+  }
+  .exchange {
+    margin-bottom: 20px;
+  }
+  footer {
+    padding-top: 150px;
+    background-size: initial;
+  }
+  footer .logo,
+  footer .inside-column,
+  footer .inside {
+    margin-bottom: 30px;
+  }
+  footer .footer-menu-wrap {
+    margin-bottom: 30px;
+  }
+  /*=====  End of Home Page  ======*/
+  /*=====================================
+	=            About us Page            =
+	=====================================*/
+  .about-working {
+    padding: 80px 0 150px 0;
+  }
+  .about-working ul li {
+    width: 100%;
+  }
+  .about-working ul li:nth-child(even) {
+    padding-left: 0;
+  }
+  /*=====  End of About us Page  ======*/
+
+}
+@media only screen and (max-width: 575px) {
+  /*=================================
+	=            Home Page            =
+	=================================*/
+  .text-head {
+    text-align: center;
+    h5 {text-align: center;}
+  }
+  .h2-main {
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+  }
+  .countdown-wrapper {
+    background: rgba($color07, .35);
+  }
+  .advantage {
+    padding: 50px 0 250px;
+    ul li {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+    ul li:nth-child(even) {
+      padding-left: 0;
+    }
+  }
+  .download-block {
+    padding: 115px 0 180px 0;
+  }
+  .media .media-cont {
+    width: 80%;
+    margin-left: 10px;
+  }
+  .media .media-cont h4 {
+    font-size: 16px;
+  }
+  .media .media-cont p {
+    font-size: 14px;
+  }
+  .our-team h5 {
+    font-size: 16px;
+  }
+  .our-team span {
+    font-size: 14px;
+  }
+  .our-team .images h5 {
+    font-size: 22px;
+  }
+  .our-team .images span {
+    font-size: 16px;
+  }
+  .grid.masonry .grid-item {
+    width: 50%;
+    margin-bottom: 30px;
+    position: static !important;
+    float: left;
+  }
+  footer {
+    padding-top: 100px;
+    background-size: 1080%;
+  }
+  footer .footer-social-wrapper {
+    padding-right: 0;
+  }
+  .copyright p {
+    font-size: 9px;
+  }
+  .copyright p img {
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+  }
+  /*=====  End of Home Page  ======*/
+}
+/*=====  End of Style Responsive  ======*/

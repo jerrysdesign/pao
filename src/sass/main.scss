@@ -1,19 +1,38 @@
 @import "../../node_modules/compass-mixins/lib/compass";
 
-@import "_reset";
 @import "_variables";
-@import "_helpers";
+// @import "_helpers";
 
-@import "_nav";
+// /**
+//   Navigation Files
 
-html {
-  font-family: $main-font;
-}
+//   01. Info
+//   02. Reset
+//   03. Base Style
+//   04. Header Style
+//   05. Elements
+//   06. Footer
+//   07. Slider
+//   08. About Us
+//   09. Trade Currency
+//   10. Contact
+//   11. Blog Grid
+//   12. Blog Widget
+//   13. Blog List
+//   14. Single Blog
+//   15. Login Signup
+//   16. Faq
+//   17. Error Page
+//   18. Calculator
+//   19. Style For Ie
 
-h1 {
-  font-size: 2em;
-}
+//  */
 
-div {
-  padding-top: 2000%;
-}
+@import "_reset";
+@import '_base';
+@import '_header';
+@import '_elements';
+@import '_footer';
+@import '_banner';
+// @import "_style";
+@import "_responsive";

@@ -24,6 +24,5 @@
     "gulp-watch": "4.3.5",
     "susy": "^2.2.12"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

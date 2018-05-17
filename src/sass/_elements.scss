@@ -1,0 +1,644 @@
+/*==========================================
+=            05. Elements Style            =
+==========================================*/
+/**
+	Navigation File
+
+	01. About
+	03. Advantage Block
+	04. Utility
+	05. Download Block
+	06. Media
+	07. Roadmap Block
+	08. Our Team
+	09. ICO
+
+/* 01. About Block
+   ==================================== */
+.about-block {
+  margin-bottom: 123px;
+}
+.about-block .about-title {
+}
+.about-block.animatedParent {
+  overflow: inherit;
+}
+
+.about-block {
+   .about-text {
+    h2 {
+      font-size: 40px;
+      line-height: 56px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+.about-block .animatedParent {
+  overflow: inherit;
+}
+/* 02. Advantage
+   ==================================== */
+.advantage {
+  padding: 115px 0 167px 0;
+  background-size: cover !important;
+  background: url(../img/background-advantage-block.png) no-repeat center;
+  ul {
+    clear: both;
+    display: inline-block;
+  }
+  ul li {
+    width: 50%;
+    float: left;
+    margin-bottom: 73px;
+  }
+  ul li img {
+    max-width: 58px;
+    margin-right: 29px;
+  }
+  ul li h5 {
+    color: $color03;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  ul li p {
+    line-height: 22px;
+  }
+  ul li:nth-child(even) {
+    padding-left: 36px;
+  }
+  .text-head {
+    margin-bottom: 64px;
+  }
+  .text-head h5 {
+    margin-bottom: 14px;
+  }
+  .see-brd-btn {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: none;
+    border: 2px solid $color-gray-light;
+    box-shadow: none;
+    color: $color-gray;
+    &:hover {
+      color: $white;
+      background-image: linear-gradient(45deg, $color12 0%, $color13 100%);
+      box-shadow: 0 0 1px 0 rgba(173,164,139,.12), 0 1px 3px 0 rgba(8,19,31,.12);
+      border-color: white;
+    }
+  }
+}
+.advantage + .modal {
+  background: rgba(#E6899B, .8)
+}
+/* 03. Utility
+   ==================================== */
+.utility {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  .text-head {
+    margin-bottom: 60px;
+  }
+  .utility-online {
+    background-image: url(../img/background-utility-online.png);
+    .white-brd-btn {
+      &:hover {
+        color: #5444F0;
+      }
+    }
+  }
+  .utility-offline {
+    background-image: url(../img/background-utility-offline.png);
+    .white-brd-btn {
+      &:hover {
+        color: #FF4AB4;
+      }
+    }
+  }
+  .utility-item {
+    display: block;
+    min-height: 380px;
+    border-radius: 6px;
+    background-size: cover;
+    padding: 40px 30px;
+    opacity: .75;
+    box-shadow: 0 10px 30px 0 rgba(0,0,0,.05);
+    height: 100%;
+    .container, .row {
+      height: 100%;
+    }
+    .white-brd-btn {
+      opacity: 0;
+    }
+    &:hover {
+      opacity: 1;
+      box-shadow: 0 10px 30px 0 rgba(0,0,0,.25);
+      .white-brd-btn {
+        opacity: 1;
+      }
+    }
+    h4 {
+      color: $white;
+    }
+    p {
+      color: $white;
+      margin-top: 20px;
+    }
+    .white-brd-btn {
+    }
+    .modal {
+
+    }
+  }
+}
+#offlineModal,
+#onlineModal {
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    // margin-bottom: 20px;
+  }
+  h4 + p {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 50px;
+    li {
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      &:nth-child(even) {
+      }
+      img {
+        max-width: 240px;
+        margin-right: 20px;
+      }
+      h5 {
+        color: $color03;
+        margin-bottom: 6px;
+      }
+      > div {
+        width: 60%;
+      }
+      p {
+      }
+    }
+  }
+}
+#offlineModal {
+  background: rgba($color15, .75)
+}
+#offlineModal + #onlineModal {
+  background: rgba($color12, .75)
+}
+/* 04. Download Block
+   ==================================== */
+.download-block {
+  margin-bottom: 31px;
+  padding: 148px 0 278px 0;
+  background: url('../img/background-download-block.png') no-repeat center;
+  background-size: cover;
+}
+.download-block .icon {
+  width: 72px;
+  height: 72px;
+  text-align: center;
+  line-height: 103px;
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 100%;
+  box-shadow: 3px 5px 15px 1px rgba(121, 105, 230, 0.13);
+  background-color: white;
+}
+.download-block .icon img {
+  max-width: 45px;
+}
+.download-block p {
+  margin-bottom: 22px;
+}
+.download-block h2 {
+  margin-bottom: 10px;
+}
+.download-block.animatedParent {
+  overflow: initial;
+}
+
+/* 05. Media
+   ==================================== */
+.media-block {
+}
+.media {
+  .media-screen {
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .media-screen img {
+    width: 100%;
+    margin-left: -30px;
+  }
+  .media-text {
+    > .container {
+      height: 100%;
+      > .row {
+        height: 100%;
+      }
+    }
+    h4 {
+      color: $color02;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .h2-main {
+      margin: 13px 0;
+    }
+    .see-brd-btn {
+      margin-top: 60px;
+    }
+  }
+
+  .media-auther {
+    border-top: 1px solid $color-gray-light;
+    padding-top: 32px;
+    .avart {
+      width: 68px;
+      height: 68px;
+      border-radius: 100%;
+      background-image: url(http://via.placeholder.com/68x68);
+    }
+    p {
+
+    }
+  }
+}
+/* 06. Roadmap
+   ==================================== */
+.roadmap {
+  margin-top: 150px;
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: $color-gray-ligtest;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    z-index: 999;
+    background-position: center;
+  }
+  &:before {
+    background-image: url(../img/background-roadmap-top.png);
+    background-size: cover;
+    bottom: auto;
+  }
+  &:after {
+    background-image: url(../img/background-roadmap-bottom.png);
+    background-size: cover;
+    top: auto;
+  }
+  .text-head {
+  }
+  .nav-center {
+    padding: 20px;
+    margin-bottom: 100px;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: $color12;
+    color: $white;
+  }
+  .nav-pills .nav-link {
+    color: $color12;
+  }
+}
+.timeline {
+  position: relative;
+  padding: 0;
+  margin-top: 2em;
+  margin-bottom: 0;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 6px;
+    height: 100%;
+    width: 3px;
+    background: $color-gray-lighter;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .timeline {
+    margin-top: 3em;
+    margin-bottom: 0;
+  }
+  .timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+.timeline-block {
+  position: relative;
+  margin: 1em 0;
+}
+.timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.timeline-block:first-child {
+  margin-top: 0;
+}
+.timeline-block:last-child {
+  margin-bottom: 0;
+  background-color: $color-gray-ligtest;
+}
+
+@media only screen and (min-width: 1170px) {
+  .timeline-block {
+    margin: 2em 0;
+  }
+  .timeline-block:first-child {
+    margin-top: 0;
+  }
+  .timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+.timeline-bullet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid $color-gray-ligtest;
+  background: $color15;
+}
+
+@media only screen and (min-width: 1170px) {
+  .timeline-bullet {
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    margin-left: -16px;
+  }
+}
+
+.timeline-content {
+  position: relative;
+  margin-left: 35px;
+  min-height: 50px;
+  margin-bottom: 10px;
+  background: $white;
+  border: 1px solid $color-gray-lighter;
+  border-radius: 4px;
+  padding: 30px;
+  transform: translateY(-50%);
+}
+
+.timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.timeline-content h5 {
+  margin: 0;
+}
+
+.timeline-content .date {
+  display: inline-block;
+}
+.timeline-content p {
+  margin: 5px 0;
+  line-height: 1.6;
+  color: #B3B3B3;
+}
+.no-touch .timeline-content .read-more:hover {
+  background-color: #bac4cb;
+}
+
+.timeline-content .date {
+  top: 50%;
+  float: left;
+  padding: 0;
+  font-weight: 600;
+  color: $color-gray-darker;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline-content {
+    margin-left: 60px;
+  }
+  .timeline-content h5 {
+  }
+  .timeline-content p {
+  }
+  .timeline-content .read-more,
+  .timeline-content .date {
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .timeline-content {
+    margin-left: 0;
+    width: 47.3%;
+  }
+  .timeline .timeline-block:nth-child(odd) .timeline-content h5,
+  .timeline .timeline-block:nth-child(odd) .timeline-content p {
+    text-align: right;
+  }
+  .timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: white;
+  }
+  .timeline-content .read-more {
+    float: left;
+  }
+  .timeline-content .date {
+    position: absolute;
+    width: 100%;
+    left: 112%;
+    top: 50%;
+  }
+  .timeline-block:nth-child(even) .timeline-content {
+    float: right;
+  }
+  .timeline-block:nth-child(even) .timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: white;
+  }
+  .timeline-block:nth-child(even) .timeline-content .read-more {
+    float: right;
+  }
+  .timeline-block:nth-child(even) .timeline-content .date {
+    left: auto;
+    right: 112%;
+    text-align: right;
+  }
+}
+/* 08. Our Team
+   ==================================== */
+.our-team {
+  padding: 60px 0 70px 0;
+  background: url(../img/background-team-block.png) no-repeat;
+  background-size: cover;
+}
+.our-team .first {
+  border-radius: 100%;
+  box-shadow: -15px -2px 0 8px $color04;
+}
+.our-team .images {
+  margin: 33px 0 0 22px;
+  display: inline-block;
+}
+.our-team .images img {
+  margin-bottom: 15px;
+}
+.our-team h5 {
+  font-size: 18px;
+  color: $color03;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.our-team span {
+  font-size: 16px;
+  color: $color01;
+}
+.our-team .text {
+  padding-left: 61px;
+}
+.our-team .text h4 {
+  color: $color02;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+.our-team .text h2 {
+  margin-bottom: 6px;
+}
+.our-team .text p {
+  margin-bottom: 10px;
+}
+.our-team .text a {
+  color: $color02;
+  font-size: 15px;
+}
+.our-team .text a img {
+  margin-left: 3px;
+  vertical-align: middle;
+}
+/* 09. Grid Masonry
+   ==================================== */
+.grid.masonry img {
+  margin-bottom: 15px;
+  border-radius: 100%;
+}
+.grid.masonry .grid-item-width2 {
+  width: 50%;
+}
+.grid.masonry .grid-item-width1 {
+  width: 25%;
+}
+.grid.masonry .grid-item:nth-child(2) {
+  padding: 40px 44px 0 0;
+}
+.grid.masonry .grid-item:nth-child(3) {
+  margin-top: -75px;
+}
+.grid.masonry .grid-item:nth-child(4) {
+  padding-top: 76px;
+  padding-left: 122px;
+}
+.grid.masonry .grid-item:nth-child(5) {
+  padding-top: 45px;
+}
+.grid.masonry .grid-item:nth-child(6) {
+  margin-top: -40px;
+  padding-left: 93px;
+}
+/* 10. Ico
+   ==================================== */
+.ico {
+  position: relative;
+  padding-top: 132px;
+  padding-bottom: 200px;
+  &:before {
+    position: absolute;
+    width: 100%;
+    content: '';
+    display: block;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 132px;
+    background-image: url(../img/background-ico-block.png);
+    background-size: cover;
+    z-index: 1;
+  }
+  margin-bottom: 50px;
+  margin-top: 50px;
+  // background-image: linear-gradient(-224deg, #FA4A6F 0%, #EF5395 31%, #DE4DCB 76%, #CE4CE6 100%);
+  background-image: linear-gradient(-224deg, #CE4CE6 0%, #DE4DCB 31%, #EF5395 76%, #FA4A6F 100%);
+  .text-head {
+    margin-bottom: 60px;
+    h5, h2, .h2-main {
+      color: white;
+    }
+  }
+  .ico-item {
+    color: white;
+    .flex {
+      display: flex;
+      padding: 10px 0;
+    }
+    .flex + .flex {
+      border-top: 1px solid rgba(white, .2);
+    }
+    dt {
+      width: 140px;
+    }
+    .container, .row {
+      height: 100%;
+    }
+    h4 {
+      color: $white;
+      margin-bottom: 25px;
+    }
+    h5 {
+      margin-bottom: 10px;
+    }
+    dl + h5 {
+      margin-top: 30px;
+    }
+  }
+  .exchange-box {
+    margin-top: 40px;
+  }
+  .exchange {
+    background-color: $white;
+    border-radius: 6px;
+    padding: 50px 60px;
+    display: block;
+    text-align: center;
+  }
+}
