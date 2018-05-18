@@ -146,9 +146,9 @@
     z-index: 9;
     background: linear-gradient(to bottom, $color12 0%, $color13 100%);
   }
-  header .blue-brd-btn,
-  .header-type-2 .blue-brd-btn {
+  header .white-brd-btn {
     margin-left: 0 !important;
+    display: none;
   }
   header .mobile-btn,
   .header-type-2 .mobile-btn {

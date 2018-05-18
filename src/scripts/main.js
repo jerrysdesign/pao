@@ -11,15 +11,21 @@ $( document ).ready(function() {
   // **********************************************************************//
   // Fixed Header
   // **********************************************************************//
+  var header = $('header');
+  if ($(window).scrollTop() > 60) {
+    header.addClass("fixed")
+  } else {
+    header.removeClass("fixed")
+  }
   $(window).on( 'scroll', function(){
     var sc = $(window).scrollTop()
-    var header = $('header');
     if (sc > 60) {
       header.addClass("fixed")
     } else {
       header.removeClass("fixed")
     }
   });
+
 
   // **********************************************************************//
   // Scroll Functions
@@ -55,4 +61,6 @@ $( document ).ready(function() {
     $(this).toggleClass('active');
   });
 
-});
+  $(window).resize(function(){location.reload();});
+
+})
