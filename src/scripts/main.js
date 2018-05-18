@@ -41,11 +41,17 @@ $( document ).ready(function() {
 
   $('.nav-menu a[href^="#"]:not([href="#"])').on('click', function(event) {
       var $anchor = $(this);
-      if ($( document ).width() <= 992) {
+      if ($( document ).width() > 992) {
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - 70
         }, 1500);
-        $('.mobile-btn.active').click();
+      } else {
+        // move without animation
+        $('html, body').scrollTop($($anchor.attr('href')).offset().top - 70)
+
+        setTimeout(function() {
+          $('.mobile-btn.active').click();
+        }, 300)
       }
       event.preventDefault();
   });
