@@ -41,11 +41,21 @@ $( document ).ready(function() {
 
   $('.nav-menu a[href^="#"]:not([href="#"])').on('click', function(event) {
       var $anchor = $(this);
-      $('html, body').stop().animate({
-          scrollTop: $($anchor.attr('href')).offset().top - 70
-      }, 1500);
+      if ($( document ).width() <= 992) {
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 70
+        }, 1500);
+        $('.mobile-btn.active').click();
+      }
       event.preventDefault();
   });
+
+  // for fix resize header display issue (mobile -> desktop)
+  $(window).resize(function() {
+      if ($( document ).width() > 992) {
+        $(".header-block").css('display', 'block');
+      }
+  })
 
   // **********************************************************************//
   // Mobile Button
@@ -61,6 +71,8 @@ $( document ).ready(function() {
     $(this).toggleClass('active');
   });
 
-  // $(window).resize(function(){location.reload();});
-
+  setTimeout(function () {
+    $('#alarmModalLabel').modal('show');
+    //alert('^-___________^');
+  }, 1000);
 })
