@@ -136,6 +136,9 @@
       box-shadow: 0 10px 30px 0 rgba(0,0,0,.25);
       .white-brd-btn {
         opacity: 1;
+        &:hover {
+          background: white;
+        }
       }
     }
     h4 {
@@ -144,11 +147,6 @@
     p {
       color: $white;
       margin-top: 20px;
-    }
-    .white-brd-btn {
-    }
-    .modal {
-
     }
   }
 }
