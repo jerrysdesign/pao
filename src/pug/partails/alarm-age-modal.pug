@@ -1,12 +1,19 @@
-#alarmModalLabel.modal.fade(tabindex='-1', role='dialog', aria-labelledby='alarmModalLabel', aria-hidden='false')
-  .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+#alarmModalLabel.modal.fade.alarm18plus(tabindex='-1', role='dialog', aria-labelledby='alarmModalLabel', aria-hidden='false')
+  .modal-dialog.modal-md.modal-dialog-centered(role='document')
     .modal-content
       .modal-header
-        h3#offlineModalLabel.modal-title 年齡驗證
+        h5#offlineModalLabel.modal-title 要进入这个网站你必须证明如下:
         button.close(type='button', data-dismiss='modal', aria-label='Close')
           span(aria-hidden='true') ×
       .modal-body
+        h3
+          | pao-token.io - 警告！
+          br
+          | 此网站
+          span 只适合成年人
+          | !
         ul
-          li
-            | 未滿18禁止瀏覽此網頁
- 
+          li 你已达到当地法律许可之法定成年年龄,观看成人内容是合法的
+          li 一旦你进入则默认并释放本站的所有内容.其中包括用户当地法律及政策的合法性..
+      .modal-footer
+        button.see-brd-btn.btn-block(type='button', data-dismiss='modal') 进入
