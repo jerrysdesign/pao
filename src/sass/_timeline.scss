@@ -1,43 +1,60 @@
 /* Media Queries */
+@mixin mq-iphone5 {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin mq-iphone6 {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
 
 @mixin mq-xs {
-  @media (min-width: 576px) {
+  @media (min-width: 480px) {
     @content;
   }
 }
 
 @mixin mq-sm {
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     @content;
   }
 }
 
 @mixin mq-md {
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 @mixin mq-lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mq-xl {
   @media (min-width: 1200px) {
     @content;
   }
 }
 
 $background: #f7f7f7;
-$box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
-$border: 1px solid rgba(191, 191, 191, 0.4);
+$box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, .07);
+$border: 1px solid rgba(191, 191, 191, .4);
 $items: 5;
 $rows: ceil($items/2);
 
 /* Card sizing */
 
-$card-height: 240px;
-$card-width: 320px;
-$inner-margin: 15px;
-$number-size: 28px;
+$card-height: 245px;
+$card-width: 345px;
+$inner-margin: 10px ;
+$number-size: 22px;
 $stagger: 180px;
-$outer-margin: 110px;
+$outer-margin: 90px;
 $marker-size: 9px;
 
 /* Colors */
@@ -50,12 +67,13 @@ $timeline: #bdbdbd;
 
 $container-height: $rows * ($card-height + $outer-margin) + $stagger;
 $container-width: $card-width*2 + $outer-margin*3;
-
+$head-height: $number-size + 50;
+$body-height: $card-height - $head-height - 2;
 $marker-dist: $card-width + $outer-margin/2 - $marker-size/2;
 
 /* Placeholders */
 
-@include mq-md {
+@include mq-lg {
   %arrow {
     position: absolute;
     content: "";
@@ -101,34 +119,61 @@ $counter: $items - $rows + 2;
     position: relative;
     margin: auto;
     &.y2018 {
-      height: 485px;
+      height: 565px;
+      @include mq-iphone5 {
+        height: 535px;
+      }
+      @include mq-iphone6 {
+        height: 485px;
+      }
+      @include mq-xs {
+        height: 485px;
+      }
       @include mq-sm {
-        height: 495px;
+        height: 485px;
       }
       @include mq-md {
-        height: 360px;
+        height: 435px;
+      }
+      @include mq-lg {
+        height: 313px;
+      }
+      @include mq-xl {
+        height: 323px;
       }
     }
     &.y2019 {
       height: 1100px;
-      @include mq-xs {
+      @include mq-iphone5 {
+        height: 1030px;
+      }
+      @include mq-iphone6 {
         height: 935px;
       }
+      @include mq-xs {
+        height: 895px;
+      }
       @include mq-sm {
-        height: 965px;
+        height: 935px;
       }
       @include mq-md {
+        height: 875px;
+      }
+      @include mq-lg {
+        height: 805px;
+      }
+      @include mq-xl {
         height: 855px;
       }
     }
-    @include mq-md {
+    @include mq-lg {
       display: flex;
       flex-flow: column wrap;
       width: $container-width;
-      // height: $container-height;
+      height: $container-height;
       margin: 0 auto;
     }
-    &::after {
+    &:after {
       z-index: 1;
       content: "";
       position: absolute;
@@ -136,7 +181,7 @@ $counter: $items - $rows + 2;
       bottom: 0;
       left: 50%;
       border-left: $border;
-      @include mq-md {
+      @include mq-lg {
         border-left: 1px solid $timeline;
       }
     }
@@ -149,12 +194,15 @@ $counter: $items - $rows + 2;
     z-index: 2;
     border-radius: 0;
     @include mq-sm {
-      max-width: 60%;
+      max-width: 80%;
       box-shadow: $box-shadow;
     }
     @include mq-md {
+      max-width: 60%;
+    }
+    @include mq-lg {
       max-width: $card-width;
-      // height: $card-height;
+      height: $card-height;
       margin: $outer-margin;
       margin-top: $outer-margin/2;
       margin-bottom: $outer-margin/2;
@@ -196,23 +244,23 @@ $counter: $items - $rows + 2;
       .number-box {
         display: inline;
         float: left;
-        margin: 10px;
+        margin: $inner-margin;
         padding: 10px;
         font-size: $number-size;
         line-height: $number-size;
         font-weight: 600;
-        background: rgba(0, 0, 0, 0.17);
+        background: rgba(0, 0, 0, .17);
       }
       h5 {
-        @include mq-sm {
+        @include mq-md {
           font-size: 120%;
           line-height: 1.2rem;
         }
         span {
           display: block;
-          font-size: 0.6rem;
+          font-size: .6rem;
           margin: 0;
-          @include mq-sm {
+          @include mq-md {
             font-size: 0.8rem;
           }
         }
@@ -223,10 +271,13 @@ $counter: $items - $rows + 2;
       border: $border;
       border-top: 0;
       padding: $inner-margin;
-      @include mq-md {
-        // height: $body-height;
+      @include mq-lg {
+        height: $body-height;
       }
       p {
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: $inner-margin;
       }
     }
     @for $i from 1 through $items {
